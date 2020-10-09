@@ -11,7 +11,11 @@ import cookieParser from 'cookie-parser'
 import config from './config'
 import Html from '../client/html'
 
-const data = require('./data')
+import Catalog from './models/Catalog.model'
+import mongooseConnection from './services/mongoose'
+
+mongooseConnection.myConnect()
+
 // eslint-disable-next-line import/order
 const { readFile, writeFile } = require('fs').promises
 
@@ -26,8 +30,10 @@ try {
   //   Root = (props) => <items.Root {...props} />
   //   console.log(JSON.stringify(items.Root))
   // })()
+  // eslint-disable-next-line no-console
   console.log(Root)
 } catch (ex) {
+  // eslint-disable-next-line no-console
   console.log(' run yarn build:prod to enable ssr')
 }
 
@@ -54,18 +60,14 @@ const middleware = [
 
 middleware.forEach((it) => server.use(it))
 
-server.get('/api/v1/catalog', (req, res) => {
-  res.json(data)
+server.get('/api/v1/catalog', async (req, res) => {
+  const catalog = await Catalog.find({})
+  res.json(catalog)
 })
 
 server.get('/api/v1/currency', async (req, res) => {
   const { data: rates } = await axios('https://api.exchangeratesapi.io/latest?symbols=USD,CAD')
   res.json(rates.rates)
-})
-
-server.get('/api/v1/logs', async (req, res) => {
-  const logs = await read()
-  res.json(logs)
 })
 
 server.post('/api/v1/logs', async (req, res) => {
@@ -91,6 +93,11 @@ server.post('/api/v1/logs', async (req, res) => {
   res.json({ status: 'ok' })
 })
 
+server.get('/api/v1/logs', async (req, res) => {
+  const logs = await read()
+  res.json(logs)
+})
+
 server.use('/api/', (req, res) => {
   res.status(404)
   res.end()
@@ -109,11 +116,6 @@ server.get('/', (req, res) => {
     res.write(htmlEnd)
     res.end()
   })
-})
-
-server.get('/api/v1/logs', async (req, res) => {
-  await read()
-  res.json(req.body)
 })
 
 server.get('/*', (req, res) => {
@@ -143,4 +145,5 @@ if (config.isSocketsEnabled) {
   })
   echo.installHandlers(app, { prefix: '/ws' })
 }
+// eslint-disable-next-line no-console
 console.log(`Serving at http://localhost:${port}`)

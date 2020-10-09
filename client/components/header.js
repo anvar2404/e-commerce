@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket'
 import { useDispatch, useSelector } from 'react-redux'
-import {setBase, setSearch} from '../redux/reducers/catalog'
+import { setBase, setSearch } from '../redux/reducers/catalog'
 
 const Header = () => {
   const selected = useSelector((s) => s.products.selected)
@@ -28,7 +28,11 @@ const Header = () => {
         </Link>
       </div>
       <nav className="w-1/4 flex justify-evenly items-center">
-        <input type="text" className="text-black rounded px-2" onChange={(e) => dispatch(setSearch(e))}/>
+        <input
+          type="text"
+          className="text-black rounded px-2"
+          onChange={(e) => dispatch(setSearch(e))}
+        />
         <div className="flex items-center w-1/8">
           <Link className to="/basket">
             <ShoppingBasketIcon className="h-10 pb-1" />

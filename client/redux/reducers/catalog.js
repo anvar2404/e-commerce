@@ -5,7 +5,7 @@ const initialState = {
   selected: {},
   currency: {},
   base: 'EUR',
-  search:'',
+  search: '',
   currencySymbol: {
     EUR: '€',
     USD: '$',
@@ -21,8 +21,8 @@ export default (state = initialState, action) => {
       return { ...state, currency: action.currency }
     case 'SET_BASE':
       return { ...state, ...state.base, base: action.newBase }
-      case 'SET_SEARCH':
-          return {...state , search: action.search}
+    case 'SET_SEARCH':
+      return { ...state, search: action.search }
     case 'ADD_TO_CART':
       return {
         ...state,
@@ -65,11 +65,6 @@ export function getCurrency() {
   }
 }
 
-export function getLogs() {
-  return (dispatch) => {
-    return axios('/api/v1/logs').then(({ data }) => dispatch({ type: '@@SET_LOGS', logs: data }))
-  }
-}
 
 export function addToBasket(id, title) {
   return { type: 'ADD_TO_CART', id, title }
@@ -83,7 +78,7 @@ export function setBase(newBase, base) {
 }
 
 export function setSearch(e) {
-    return (dispatch) => {
-      return dispatch({ type:'SET_SEARCH', search: e.target.value })
-    }
+  return (dispatch) => {
+    return dispatch({ type: 'SET_SEARCH', search: e.target.value })
+  }
 }

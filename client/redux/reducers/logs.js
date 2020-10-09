@@ -15,3 +15,9 @@ export default (state = initialState, action) => {
       return state
   }
 }
+
+export function getLogs() {
+  return (dispatch) => {
+    return axios('/api/v1/logs').then(({ data }) => dispatch({ type: '@@SET_LOGS', logs: data }))
+  }
+}

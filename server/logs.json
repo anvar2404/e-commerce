@@ -110,5 +110,117 @@
   {
     "time": "2020-10-03T19:34:00.921Z",
     "event": "Добавлен товар C - Plus, Orange"
+  },
+  {
+    "time": 1602261418399,
+    "event": "Добавлен товар Beans - Fine"
+  },
+  {
+    "time": 1602261418489,
+    "event": "Добавлен товар Beans - Fine"
+  },
+  {
+    "time": 1602261419349,
+    "event": "Добавлен товар C - Plus, Orange"
+  },
+  {
+    "time": 1602261419457,
+    "event": "Добавлен товар C - Plus, Orange"
+  },
+  {
+    "time": 1602261423305,
+    "event": "Валюта сменилась с EUR на EUR"
+  },
+  {
+    "time": 1602261424567,
+    "event": "Валюта сменилась с EUR на CAD"
+  },
+  {
+    "time": 1602261425871,
+    "event": "Валюта сменилась с CAD на USD"
+  },
+  {
+    "time": 1602262162830,
+    "event": "Добавлен товар Beans - Fine"
+  },
+  {
+    "time": 1602262203113,
+    "event": "Добавлен товар Beans - Fine"
+  },
+  {
+    "time": 1602262249101,
+    "event": "Добавлен товар Beans - Fine"
+  },
+  {
+    "time": 1602262250449,
+    "event": "Добавлен товар Beans - Fine"
+  },
+  {
+    "time": 1602262251152,
+    "event": "Добавлен товар Beans - Fine"
+  },
+  {
+    "time": 1602262252285,
+    "event": "Добавлен товар C - Plus, Orange"
+  },
+  {
+    "time": 1602262252547,
+    "event": "Добавлен товар C - Plus, Orange"
+  },
+  {
+    "time": 1602262252625,
+    "event": "Добавлен товар C - Plus, Orange"
+  },
+  {
+    "time": 1602262252858,
+    "event": "Добавлен товар C - Plus, Orange"
+  },
+  {
+    "time": 1602262253013,
+    "event": "Добавлен товар C - Plus, Orange"
+  },
+  {
+    "time": 1602262253184,
+    "event": "Добавлен товар C - Plus, Orange"
+  },
+  {
+    "time": 1602262339709,
+    "event": "Добавлен товар Beans - Fine"
+  },
+  {
+    "time": 1602262340439,
+    "event": "Добавлен товар Beans - Fine"
+  },
+  {
+    "time": 1602262341909,
+    "event": "Добавлен товар C - Plus, Orange"
+  },
+  {
+    "time": 1602262342047,
+    "event": "Добавлен товар C - Plus, Orange"
+  },
+  {
+    "time": 1602262342790,
+    "event": "Добавлен товар Pasta - Detalini, White, Fresh"
+  },
+  {
+    "time": 1602262343236,
+    "event": "Добавлен товар Pasta - Detalini, White, Fresh"
+  },
+  {
+    "time": 1602262344333,
+    "event": "Добавлен товар Blue Curacao - Marie Brizard"
+  },
+  {
+    "time": 1602262692788,
+    "event": "Добавлен товар Pasta - Detalini, White, Fresh"
+  },
+  {
+    "time": 1602263426057,
+    "event": "Добавлен товар C - Plus, Orange"
+  },
+  {
+    "time": 1602263865088,
+    "event": "Добавлен товар Pasta - Detalini, White, Fresh"
   }
 ]
